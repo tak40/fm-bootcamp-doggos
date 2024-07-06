@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -8,10 +9,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  margin: 0;
-  padding: 0;
   font-family: "Nunito", sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f7f9fc;
+  color: #333333;
 }
 
 /* HEADER  */
@@ -21,20 +21,43 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 2em 3em;
-  background-color: blanchedalmond;
+  padding: 1.5em 5em;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header img {
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.paw-icon {
+  width: 3em;
+}
+
+.dog-logo {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 10em;
+  width: 6em;
   height: auto;
 }
 
 h1 {
-  font-family: "Luckiest Guy", sans-serif;
-  font-size: 3rem;
+  font-family: "Fredoka One", sans-serif;
+  font-size: 2rem;
+  color: #4a90e2;
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: #333333;
 }
 
 /* MAIN  */
@@ -43,15 +66,15 @@ main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 0 3em;
-}
-
-main section {
+  padding: 2em 3em;
   text-align: center;
 }
 
+main section {
+  margin-bottom: 2em;
+}
+
 .breed-controls {
-  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,12 +82,25 @@ main section {
   gap: 1em;
   padding: 1em;
   margin: 1em 0;
-  border: 1px dotted green;
 }
 
 .breed-controls p {
   font-size: 1.5rem;
-  margin: 0;
+}
+
+.breed-controls select {
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border: 2px solid #4a90e2;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.breed-controls select:focus {
+  border-color: #f76c6c;
 }
 
 .dog-display {
@@ -73,13 +109,12 @@ main section {
   align-items: center;
   flex-grow: 1;
   overflow: hidden;
-  border: 1px dotted blue;
 }
 
 .doggo-img {
   width: auto;
-  max-height: 30em;
-  border-radius: 1em;
+  max-height: 25em;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -88,8 +123,8 @@ main section {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #333;
-  color: white;
+  background-color: #4a90e2;
+  color: #ffffff;
 }
 
 /* KEYFRAMES */
