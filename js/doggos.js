@@ -28,22 +28,21 @@ select.addEventListener("change", function (event) {
   getDoggo(url);
 });
 
+// Show the loading spinner
 function showLoadingSpinner() {
-  console.log("Showing spinner");
   spinner.style.display = "block";
 }
 
+// Hide the loading spinner
 function hideLoadingSpinner() {
-  console.log("Hiding spinner");
   spinner.style.display = "none";
 }
 
+// Fetches and displays a dog image from the given URL
 function getDoggo(url) {
-  // Show loading spinner
   doggosDiv.innerHTML = "";
   showLoadingSpinner();
 
-  // Fetch from the API
   fetch(url)
     .then(function (response) {
       return response.json();
@@ -61,7 +60,6 @@ function getDoggo(url) {
       console.log("Error fetching doggos: ", error);
     })
     .finally(function () {
-      // Hide the loading spinner
       hideLoadingSpinner();
     });
 }
