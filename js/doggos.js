@@ -52,6 +52,7 @@ function getDoggo(url) {
       const img = document.createElement("img");
       img.src = data.message;
       img.alt = "Cute doggo";
+      img.className = "doggo-img";
 
       doggosDiv.innerHTML = "";
       doggosDiv.appendChild(img);
