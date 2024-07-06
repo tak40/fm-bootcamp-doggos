@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dogs</title>
+    <title>Pawsome Pics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
-    <h1>Doggos</h1>
-    <button class="add-doggo">Get Doggos</button>
-    <select class="breeds"></select>
-    <div class="doggos"></div>
+    <header>
+      <div class="header-content">
+        <h1>Pawsome Pics</h1>
+        <h2>Discover and Enjoy Adorable Dog Photos</h2>
+      </div>
+      <img src="assets/dog_header_200x200.png" alt="Dog Logo" />
+    </header>
+
+    <main>
+      <section>
+        <p>Pick your favorite dog breed to see a cute picture:</p>
+        <select class="breeds"></select>
+      </section>
+      <section>
+        <img
+          src="https://frontendmasters.github.io/bootcamp/mole-game/king-mole-hungry.png"
+          style="background-color: brown; border-radius: 50%; display: none"
+          class="spinner mole spin"
+        />
+        <div class="doggos"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Pawsome Pics</p>
+    </footer>
+
     <script src="js/doggos.js"></script>
   </body>
 </html>

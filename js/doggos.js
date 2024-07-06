@@ -1,9 +1,10 @@
 const BREEDS_URL = "https://dog.ceo/api/breeds/list/all";
 const select = document.querySelector(".breeds");
 const doggosDiv = document.querySelector(".doggos");
+const spinner = document.querySelector(".spinner");
 
-// fetch breeds and add them to the <select>
-fetch(BREEDS_URL) // fetch returns a promise
+// Fetch breeds and add them to the <select>
+fetch(BREEDS_URL)
   .then(function (response) {
     return response.json();
   })
@@ -27,15 +28,27 @@ select.addEventListener("change", function (event) {
   getDoggo(url);
 });
 
+function showLoadingSpinner() {
+  console.log("Showing spinner");
+  spinner.style.display = "block";
+}
+
+function hideLoadingSpinner() {
+  console.log("Hiding spinner");
+  spinner.style.display = "none";
+}
+
 function getDoggo(url) {
-  // show loading spinner
-  // fetch from the API
+  // Show loading spinner
+  doggosDiv.innerHTML = "";
+  showLoadingSpinner();
+
+  // Fetch from the API
   fetch(url)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data.message);
       const img = document.createElement("img");
       img.src = data.message;
       img.alt = "Cute doggo";
@@ -45,9 +58,9 @@ function getDoggo(url) {
     })
     .catch(function (error) {
       console.log("Error fetching doggos: ", error);
+    })
+    .finally(function () {
+      // Hide the loading spinner
+      hideLoadingSpinner();
     });
-
-  // use the URL to change the current image
-
-  // hide the loading spinner
 }
