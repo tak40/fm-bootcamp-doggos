@@ -1,4 +1,4 @@
-# Frontend Masters Bootcamp: Pawsome Pics
+# Frontend Masters Bootcamp: Pawsome Pics (Dog App Exercise Project)
 
 ## Introduction
 
