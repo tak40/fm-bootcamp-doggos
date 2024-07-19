@@ -1,4 +1,4 @@
-# Pawsome Pics
+# Frontend Masters Bootcamp: Pawsome Pics
 
 ## Introduction
 
